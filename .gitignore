@@ -1,0 +1,11 @@
+secrets.h
+
+build/
+*.bin
+*.elf
+*.map
+*.hex
+
+.vscode/
+.pio/
+.DS_Store
