@@ -6,12 +6,15 @@
 #include <config.h>
 #include <Walk.h>
 #include<commandRunner.h>
+#include "ble_server.h"
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   Wire.begin();
   walk.init();
+  bleServer.initialize();
+  bleServer.start();
 }
 
 void loop() {
