@@ -31,6 +31,9 @@ void BleServer::initialize(){
 void BleServer::start(){
   server = NimBLEDevice::createServer();
   server->setCallbacks(&bleServerCallbacks);
+  /* NimBLE 2.5.1 initialises this to false, which leaves the board silent once
+     a client disconnects: one connection per power cycle. */
+  server->advertiseOnDisconnect(true);
 
   NimBLEAdvertising* bleAdvertising = NimBLEDevice::getAdvertising();
   bleAdvertising->setName(BLE_SERVER_NAME);
