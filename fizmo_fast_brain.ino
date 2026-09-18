@@ -4,7 +4,7 @@
 #include <commands.h>
 #include <commands_impl.h>
 #include <config.h>
-#include <Walk.h>
+#include <walk.h>
 #include<commandRunner.h>
 #include "ble_server.h"
 
