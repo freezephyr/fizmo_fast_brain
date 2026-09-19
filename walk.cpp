@@ -10,7 +10,7 @@ Walk walk;
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 void Walk::init(){};
 
-int  Walk::tick_from_lvl1_normalized(float norm, uint8_t jointSweepMin, uint8_t jointSweepMax){
+int  Walk::tick_from_lvl1_normalized(float norm, int jointSweepMin, int jointSweepMax){
    int tick=(jointSweepMax-jointSweepMin)*norm+jointSweepMin;
   return (int)tick;
 

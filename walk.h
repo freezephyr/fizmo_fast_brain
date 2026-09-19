@@ -10,7 +10,7 @@ class Walk : public AbstractCommand {
 
   private:
     void  apply_pose(const float pose[NUM_JOINTS]);
-    int tick_from_lvl1_normalized(float norm, uint8_t jointSweepMin, uint8_t jointSweepMax);
+    int tick_from_lvl1_normalized(float norm, int jointSweepMin, int jointSweepMax);
   public:
   Walk(){} void init();
   CommandState start(ParsedCommand currentParsedCommand, CommandState previousState);
